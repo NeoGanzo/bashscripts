@@ -1,6 +1,8 @@
 #! /bin/bash
 #Script para monitoreo de Recursos del Servidor:
-#Autor: Jose Castrejon Morales:
+#Se utiliza de base el script de esta pagina: https://kloudvm.com/linux/bash-script-monitor-cpu-memory-disk-usage-on-linux/
+#y se realizan adaptaciones para que el monitoreo se ejecute 3 veces por dia mediante jenkins:
+#Autor: Jose Castrejon:
 
 printf "Memory\t\tDisk\t\tCPU\n"
 MEMORYNUMBER=$(free -m | awk 'NR==2{printf $3*100/$2}')
